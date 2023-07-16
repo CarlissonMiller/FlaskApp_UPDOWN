@@ -43,7 +43,7 @@ def upload_file():
 
             print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            output_file = process_file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            process_file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             # print(filename)
             # return send_from_directory(DOWNLOAD_FOLDER, "product_data.csv")
             return redirect(url_for('download'))
